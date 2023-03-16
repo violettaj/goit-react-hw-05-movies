@@ -1,7 +1,7 @@
 import { getTrending } from 'components/Api/Api';
-import { MoviesList } from './MoviesList/MoviesList';
+import { MoviesList } from '../components/MoviesList';
 import { useState, useEffect } from 'react';
-import { Loader } from './Loader/Loader';
+import { Loader } from '../components/Loader';
 
 export const Home = () => {
   const [movies, setMovies] = useState([]);

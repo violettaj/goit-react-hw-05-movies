@@ -6,7 +6,7 @@ export const MoviesList = ({ movies }) => {
     <ul className={css.list}>
       {movies.map(movie => (
         <li key={movie.id}>
-          <Link to="/movies/movieId">{movie.title}</Link>
+          <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
         </li>
       ))}
     </ul>

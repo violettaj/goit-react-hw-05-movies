@@ -1,10 +1,10 @@
 import React from 'react';
-import { Searchbar } from './Searchbar/Searchbar.js';
+import { Searchbar } from '../components/Searchbar.js';
 import { useState, useEffect } from 'react';
 import { searchMovies } from 'components/Api/Api';
 import { useSearchParams } from 'react-router-dom';
-import { MoviesList } from 'pages/Home/MoviesList/MoviesList.js';
-import { Loader } from 'pages/Home/Loader/Loader.js';
+import { MoviesList } from 'components/MoviesList.js';
+import { Loader } from 'components/Loader.js';
 
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -18,9 +18,11 @@ export const Movies = () => {
     const getMovieByQuery = async () => {
       try {
         setIsLoading(true);
-        const { results } = await searchMovies(query);
+        const result = await searchMovies(query);
 
-        setMovies(results);
+        console.log(result);
+
+        setMovies(result);
       } catch (err) {
         setError(err.message);
       } finally {
