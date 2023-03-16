@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/415.99061dd1.chunk.css","mappings":"AAAA,wBACE,cAAe,CACf,eAAgB,CAChB,oBACF","sources":["components/MoviesList.module.css"],"sourcesContent":[".list {\n  font-size: 20px;\n  font-weight: 400;\n  list-style-type: disc;\n}\n"],"names":[],"sourceRoot":""}
