@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Outlet, Link } from 'react-router-dom';
 import { Suspense } from 'react';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
 
@@ -39,3 +39,4 @@ export const MovieDetails = () => {
     );
   }
 };
+export default MovieDetails;
